@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islamiappnew/modules/core/app_theme_manger.dart';
+import 'package:islamiappnew/modules/hadeth/hadith_details.dart';
 import 'package:islamiappnew/modules/layout/layout_view.dart';
-import 'package:islamiappnew/modules/quran/quran_detailes.dart';
+import 'package:islamiappnew/modules/quran/quran_details.dart';
 import 'package:islamiappnew/modules/splash/splash.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashView.routname: (context) => SplashView(),
         LayoutView.routname: (context) => LayoutView(),
-        QuranDetailes.routName: (context) => const QuranDetailes(),
+        QuranDetails.routName: (context) => const QuranDetails(),
+        HadithDetails.routName: (context) => const HadithDetails(),
       },
     );
   }
