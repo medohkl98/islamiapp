@@ -43,15 +43,16 @@ class App_Theme_Manger {
             fontFamily: "El Messiri",
             fontSize: 25,
             fontWeight: FontWeight.w400,
-          ),
-          bodySmall: TextStyle(
-              fontFamily: "El Messiri",
-              fontSize: 20,
-              fontWeight: FontWeight.w400),
-          displaySmall: TextStyle(
+        ),
+        bodySmall: TextStyle(
             fontFamily: "El Messiri",
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-          )),
-      dividerTheme: const DividerThemeData(color: primaryColor));
+            fontSize: 20,
+            fontWeight: FontWeight.w400),
+        displaySmall: TextStyle(
+          fontFamily: "El Messiri",
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+        )),
+    dividerTheme: const DividerThemeData(color: primaryColor, space: 10),
+  );
 }

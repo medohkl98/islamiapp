@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamiappnew/modules/quran/quran_detailes.dart';
+import 'package:islamiappnew/modules/quran/quran_details.dart';
 import 'package:islamiappnew/modules/quran/widgets/sura_title_widget.dart';
 
 class QuranView extends StatelessWidget {
@@ -163,7 +163,7 @@ class QuranView extends StatelessWidget {
           child: ListView.builder(
             itemBuilder: (context, index) => InkWell(
               onTap: () {
-                Navigator.pushNamed(context, QuranDetailes.routName,
+                Navigator.pushNamed(context, QuranDetails.routName,
                     arguments: SuraData(
                       suraName: suraNames[index],
                       suraNum: (index + 1).toString(),

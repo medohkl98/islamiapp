@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiappnew/modules/quran/quran_view.dart';
 
-class QuranDetailes extends StatefulWidget {
+class QuranDetails extends StatefulWidget {
   static const String routName = "quranDetailes";
 
-  const QuranDetailes({super.key});
+  const QuranDetails({super.key});
 
   @override
-  State<QuranDetailes> createState() => _QuranDetailesState();
+  State<QuranDetails> createState() => _QuranDetailsState();
 }
 
-class _QuranDetailesState extends State<QuranDetailes> {
+class _QuranDetailsState extends State<QuranDetails> {
   String content = "";
 
   @override
