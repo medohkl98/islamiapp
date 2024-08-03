@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:islamiappnew/modules/hadeth/hadith_view.dart';
+import 'package:islamiappnew/modules/quran/quran_view.dart';
+import 'package:islamiappnew/modules/radio/radio_view.dart';
+import 'package:islamiappnew/modules/sebha/sebha_view.dart';
+import 'package:islamiappnew/modules/settings/settings_view.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routname = "Layout";
@@ -11,7 +16,13 @@ class LayoutView extends StatefulWidget {
 
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
-  List<Widget> screenIndex = [];
+  List<Widget> screenIndex = [
+    QuranView(),
+    HadithView(),
+    SebhaView(),
+    RadioView(),
+    SettingsView()
+  ];
 
   @override
   Widget build(BuildContext context) {

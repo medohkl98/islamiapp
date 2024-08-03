@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class App_Theme_Manger {
+  static const Color primaryColor = Color(0xffB7935F);
   static ThemeData lightTheme = ThemeData(
+      primaryColor: primaryColor,
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: const AppBarTheme(
           centerTitle: true,
@@ -15,7 +17,7 @@ class App_Theme_Manger {
           )),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xffB7935F),
+        backgroundColor: primaryColor,
         selectedItemColor: Color(0xff242424),
         unselectedItemColor: Color(0xffF8F8F8),
         showUnselectedLabels: false,
@@ -50,5 +52,6 @@ class App_Theme_Manger {
             fontFamily: "El Messiri",
             fontSize: 16,
             fontWeight: FontWeight.w400,
-          )));
+          )),
+      dividerTheme: const DividerThemeData(color: primaryColor));
 }
