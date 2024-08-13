@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islamiappnew/modules/core/settings_provider.dart';
 import 'package:islamiappnew/modules/hadeth/hadith_view.dart';
 import 'package:islamiappnew/modules/quran/quran_view.dart';
 import 'package:islamiappnew/modules/radio/radio_view.dart';
 import 'package:islamiappnew/modules/sebha/sebha_view.dart';
 import 'package:islamiappnew/modules/settings/settings_view.dart';
+import 'package:provider/provider.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routname = "Layout";
@@ -26,22 +29,26 @@ class _LayoutViewState extends State<LayoutView> {
 
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    AppLocalizations lang = AppLocalizations.of(context)!;
+    var provider = Provider.of<SettingsProvider>(context);
+
     // TODO: implement build
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/imgs/home_background.png"),
+        image: AssetImage(provider.getHomeBackround()),
         fit: BoxFit.cover,
       )),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("إسلامي"),
+          title: Text(lang.islami),
 
           //titleTextStyle: Color(Colors.black),
         ),
         body: screenIndex[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: const Color(0xffB7935F),
+          // backgroundColor: theme.primaryColor,
           currentIndex: selectedIndex,
           onTap: (value) {
             selectedIndex = value;
@@ -51,18 +58,18 @@ class _LayoutViewState extends State<LayoutView> {
           items: [
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/quran_icon.png")),
-                label: "Quran"),
+                label: lang.quran),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/hadeth_icon.png")),
-                label: "Hadeth"),
+                label: lang.hadith),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/sebha_icon.png")),
-                label: "Sebha"),
+                label: lang.sebha),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/radio_icon.png")),
-                label: "Radio"),
+                label: lang.raido),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings")
+                icon: Icon(Icons.settings), label: lang.settings)
           ],
         ),
       ),

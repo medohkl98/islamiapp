@@ -6,10 +6,12 @@ class SebhaView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(
-          "assets/icons/sebha_header.png",
-          scale: 1.2,
-        )
+        Stack(alignment: Alignment.topCenter, children: [
+          Image.asset(
+            "assets/icons/head_sebha.png",
+            scale: 1.2,
+          ),
+        ])
       ],
     );
   }

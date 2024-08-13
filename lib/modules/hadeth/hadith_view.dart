@@ -6,6 +6,7 @@ class HadithView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
+
     if (ahdithList.isEmpty) loadingHadithData();
     return Column(
         // crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -47,7 +48,7 @@ class HadithView extends StatelessWidget {
 
   Future<void> loadingHadithData() async {
     ahdithContent =
-        await rootBundle.loadString("assets/files/hadeih/ahadeth.txt");
+        await rootBundle.loadString("assets/files/hadith/ahadeth.txt");
     ahadith = ahdithContent.split("#");
 
     for (int i = 0; i < ahadith.length; i++) {
@@ -58,7 +59,7 @@ class HadithView extends StatelessWidget {
       String body = singleHadith.substring(titleLength + 1);
       AhadithData data = AhadithData(title: title, body: body);
       ahdithList.add(data);
-      print(body);
+      //print(body);
     }
 
     // setState(() {});
